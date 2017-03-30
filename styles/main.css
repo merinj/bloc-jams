@@ -61,8 +61,13 @@ body {
 }
 
 /*#5 */
-.links-container .navbar-link:hover{
+.links-container .navbar-link:hover {
     color: rgb(233,50,117);
+
+}
+ .navbar-link:active {
+    background-color: white;
+    
 }
 .container {
     margin: 0 auto;
