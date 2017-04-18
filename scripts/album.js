@@ -3,7 +3,7 @@ var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
       
-       + '  <td class="song-item-number" data-song-number="' + songNumber + '">' + songNumber + '</td>'
+       + '  <td class="song-item-number" "data-song-number="' + songNumber + '">' + songNumber + '</td>'
       + '  <td class="song-item-title">' + songName + '</td>'
       + '  <td class="song-item-duration">' + songLength + '</td>'
       + '</tr>'
@@ -162,6 +162,15 @@ var previousSong = function() {
 
     $previousSongNumberCell.html(pauseButtonTemplate);
     $lastSongNumberCell.html(lastSongNumber);
+};
+
+var setSong = function(songNumber){
+    currentlyPlayingSongNumber = songNumber;
+    currentSongFromAlbum=$('.song-item-number[data-song-number="' + currentlyPlayingSongNumber + '"]');
+};
+
+var getSongNumberCell = function(number){
+    var songNumber=$(this).attr('data-song-number');
 };
 
  
